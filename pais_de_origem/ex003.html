@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> Informe seu País de Origem!</h1>
+    <input type="text" id="txtn1">
+    <input type="button" value="Verificar" onclick="pesquisar()">
+    <div id="res"> Aguarde</div>
+
+    <script>
+        function pesquisar() {
+            var tn1 = document.getElementById("txtn1")
+            var res = document.getElementById("res") 
+            var n1 = String(tn1.value)
+
+            res.innerHTML = `Você é Brasileiro(a)?` 
+            if (n1 != "Brasil") {
+                res.innerHTML += " Nãoooo, você é estrangeiro."
+            } else {
+                res.innerHTML += " Siimmmm, Brazuka na área."
+                }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <header>
+        <strong> Aprendendo Programação </strong>
+    </header>
+        <section>
+            <div>
+                Informe a sua data de nascimento:
+                <br/><br/>
+                <input type="text" class="data" id="txtdia" value="dd"> 
+                <input type="text" class="data" id="txtmes" value="mm"> 
+                <input type="text" class="data" id="txtano" value="aaaa">
+                <br/><br/>
+                <input type="radio" name="radsex" id="mas" checked>
+                <label for="mac"> Masculino </label>
+                <input type="radio" name="radsex" id="fem">
+                <label for="fem"> Feminino </label>
+                
+                <br/>
+                <input type="button" class="botao" value="Calcular" onclick="verificar()">
+            </div>
+
+                <div id="res"> Após preencher os dados acima, sua idade será informada! </div>
+        </section>
+    <footer>
+            <p>&copy; Kasuna CodeTech</p>
+    </footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>

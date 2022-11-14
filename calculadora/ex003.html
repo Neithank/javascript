@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    
+<style> 
+    *{
+    margin: 0; /*Trazendo tudo zero, inicio da pagina */
+    padding: 0; 
+    }
+    
+    
+    .fundo{
+        background: linear-gradient(45deg, black, rgb(118, 7, 192)); 
+        height: 100vh;
+        color: white;
+        font: Tahoma;
+        text-align: center;
+
+    }
+    .calculadora{
+        position: absolute; 
+        background-color: rgb(10, 10, 30);
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 15px;
+        padding: 15px;
+    }
+    .botao{
+        width: 40px;
+        height: 40px;
+        background-color: purple ;
+        font-size: 20px;
+        cursor: pointer;
+        color: white;
+        border-radius: 10px;
+        border: none;
+        margin: 3px;
+    } 
+    .botao:hover{
+        background-color: blueviolet;
+    }
+    .visor{
+        width: 160px;
+        height: 40px; 
+        background:white;
+        color: black;
+        text-align: right;
+        font-size: 25px;
+        margin: 3px;
+        padding: 5px;
+
+    }    
+</style>
+</head>
+<body>
+    <div class="fundo"> 
+            <h1> Aprendendo Programação! </h1>
+            <p>&copy; Kasuna CodeTech</p>
+            <div class="calculadora">
+                <h1> Calculadora </h1>
+        
+                <br/>
+                <input type="text"  id="visor" class="visor"> <br/>
+                <br/>
+                <input type="button" class="botao" value="C" onclick="limpar()">
+                <input type="button" class="botao" value="<" onclick="back()">
+                <input type="button" class="botao" value="%" onclick="receber('%')">
+                <input type="button" class="botao" value="/" onclick="receber('/')"> <br/>
+                <br/>
+                <input type="button" class="botao" value="7" onclick="receber(7)">
+                <input type="button" class="botao" value="8" onclick="receber(8)">
+                <input type="button" class="botao" value="9" onclick="receber(9)">
+                <input type="button" class="botao" value="*" onclick="receber('*')"> <br/>  
+                <br/>
+                <input type="button" class="botao" value="4" onclick="receber(4)">
+                <input type="button" class="botao" value="5" onclick="receber(5)">
+                <input type="button" class="botao" value="6" onclick="receber(6)">
+                <input type="button" class="botao" value="-" onclick="receber('-')"> <br/>
+                <br/>
+                <input type="button" class="botao" value="1" onclick="receber(1)">
+                <input type="button" class="botao" value="2" onclick="receber(2)">
+                <input type="button" class="botao" value="3" onclick="receber(3)">
+                <input type="button" class="botao" value="+" onclick="receber('+')"> <br/>
+                <br/>
+                <input type="button" class="botao" value="." onclick="receber('.')">
+                <input type="button" class="botao" value="0" onclick="receber(0)">
+                <input type="button" class="botao" style="width: 90px;" value="=" onclick="calcular()"> <br/>
+        </div>
+    </div>
+    
+   <script>
+        function limpar(){
+            document.getElementById("visor").value = "";
+        }
+        function back(){
+            document.getElementById("visor").value = visor.substring(0, visor.lenght -1);
+        }
+        function receber(valor){
+            document.getElementById("visor").value += valor;
+        }
+        function calcular(){
+            var resultado = 0;
+            resultado = document.getElementById("visor").value;
+            document.getElementById("visor").value = "0"
+            document.getElementById("visor").value = eval(resultado)
+        }
+   </script>
+    <footer>
+
+</footer>
+
+</body>
+</html>
